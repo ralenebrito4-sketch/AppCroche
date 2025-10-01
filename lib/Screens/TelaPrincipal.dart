@@ -23,13 +23,13 @@ class HomeScreen extends StatelessWidget {
                         decoration: InputDecoration(
                           hintText: "Buscar...",
                           filled: true,
-                          fillColor: Colors.white,
-                       /*   child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.filter_alt_outlined),
-                          )*/
-                          
-                          prefixIcon: const Icon(Icons.filter_alt_outlined, size: 20),
+                          fillColor: Colors.white,                   
+                          prefixIcon: IconButton(
+                            icon: Icon(Icons.filter_alt_outlined, size: 20),
+                            onPressed: () {
+                            
+                            },
+                          ),
                           suffixIcon: const Icon(Icons.search, size: 20),
                           contentPadding: const EdgeInsets.symmetric(vertical: 0),
                           border: OutlineInputBorder(
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.star), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.delete), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
         ],
       ),
