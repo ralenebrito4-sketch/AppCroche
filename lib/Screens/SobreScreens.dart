@@ -86,12 +86,7 @@ class SobreScreens extends StatelessWidget {
                         fontFamily: 'Karla',
                         fontWeight: FontWeight.w900,
                         decoration: TextDecoration.underline,
-                        decorationColor: const Color.fromARGB(
-                          255,
-                          249,
-                          189,
-                          85,
-                        ),
+                         decorationColor:  Color.fromARGB(255,249,189,85),
                         decorationStyle: TextDecorationStyle.wavy,
                         decorationThickness: 3,
                       ),
