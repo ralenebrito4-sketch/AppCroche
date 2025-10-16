@@ -211,14 +211,14 @@ class _LoginScreen extends State<LoginScreen> {
                     height: 45,
                     child: TextButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
+                      //  if (_formKey.currentState!.validate()) {
                           // Aqui vai a tela principal
                           Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => HomeScreen(),
-                        ));}
-                      },
+                        ));},
+                      //},
                       style: TextButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 247, 111, 111),
                         shape: RoundedRectangleBorder(
@@ -273,6 +273,7 @@ class _LoginScreen extends State<LoginScreen> {
                       ),
                     ),
                   ),],),)
+                  
                 ],
               ),
             ),
