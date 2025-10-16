@@ -211,14 +211,17 @@ class _LoginScreen extends State<LoginScreen> {
                     height: 45,
                     child: TextButton(
                       onPressed: () {
-                      //  if (_formKey.currentState!.validate()) {
-                          // Aqui vai a tela principal
-                          Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
-                        ));},
-                      //},
+                          if (_formKey.currentState!.validate()) {
+                        // Aqui vai a tela principal
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                HomeScreen(loggedEmail: emailController.text),
+                          ),
+                        );
+                      }
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 247, 111, 111),
                         shape: RoundedRectangleBorder(
@@ -246,34 +249,37 @@ class _LoginScreen extends State<LoginScreen> {
                     ),
                   ),
                   Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(children: [
-                    SizedBox(height: 50),
-                  SizedBox(
-                    height: 20,
-                    width: 100,
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SobreScreens(),
+                    alignment: Alignment.bottomCenter,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 50),
+                        SizedBox(
+                          height: 20,
+                          width: 100,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SobreScreens(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Sobre',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontFamily: 'Karla',
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.white,
+                              ),
+                            ),
                           ),
-                        );
-                      },
-                      child: Text(
-                        'Sobre',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontFamily: 'Karla',
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white,
                         ),
-                      ),
+                      ],
                     ),
-                  ),],),)
-                  
+                  ),
                 ],
               ),
             ),
